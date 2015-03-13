@@ -1,0 +1,18 @@
+<form name="newArticle" ng-submit="article.postData()" novalidate>
+  <div class="row">
+    <div class="u-full-width">
+      <label>Title</label>
+      <input class="u-full-width" type="text" placeholder="Title" ng-model="article.newPost.title">
+    </div>
+    <div class="u-full-width">
+      <label>URL</label>
+      <input class="u-full-width" type="url" placeholder="http://example.com/article" ng-model="article.newPost.linkUrl">
+    </div>
+    <div class="u-full-width">
+      <label>Image URL</label>
+      <input class="u-full-width" type="url" placeholder="http://example.com/img.png" ng-model="article.newPost.imageUrl">
+    </div>
+  </div>
+
+  <input class="button-primary" type="submit" value="Submit">
+</form>

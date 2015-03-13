@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Newsagg</title>
+    <title>My Title</title>
     <link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
     <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
   </head>
   <body>
     <!--[if lt IE 9]>
@@ -15,14 +17,19 @@
     <![endif]-->
 
     <div class="container">
-      <h1>NeWsAgG</h1>
-      <div ng-app></div>
+      <div ng-app="news" ng-controller="ArticleTableCtrl as table">
+        <h1>News</h1>
+        <div ng-view></div>
+      </div>
     </div>
 
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.module.js"></script>
+    <script src="js/main.config.js"></script>
+    <script src="js/articles/table.controller.js"></script>
+    <script src="js/articles/new.controller.js"></script>
   </body>
 </html>
