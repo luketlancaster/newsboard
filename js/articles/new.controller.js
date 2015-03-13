@@ -10,6 +10,7 @@ function NewArticleCtrl($http, $location) {
   vm.postData = function () {
     vm.newPost.postDate = (new Date()).toJSON();
     vm.newPost.submittedBy = 'Anonymous';
+    vm.newArticle.votes = {up: 0, down: 0};
 
     $http
       .post('https://newsagg.firebaseio.com/articles.json', vm.newPost)

@@ -5,13 +5,16 @@ angular
 function ArticleTableCtrl($http) {
   var vm = this;
 
-  vm.post = function () {
-    var data = vm.articles;
-    $http
-      .put('https://newsagg.firebaseio.com/articles/.json', data)
-      .success(function () {
-        console.log('works');
-      }). error(function() {console.log('nope')});
+  vm.vote = function (direction, uuid) {
+    var data = vm.articles[uuid];
+
+    if (direction === 'up') {
+      data.votes.up++;
+    } else if (direction === 'down') {
+      data.votes.down++;
+    }
+
+    $http.put('https://newsagg.firebaseio.com/articles/' + uuid + '.json', data);
   };
 
   $http
