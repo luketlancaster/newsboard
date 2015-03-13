@@ -5,9 +5,14 @@ angular
 function ArticleTableCtrl($http) {
   var vm = this;
 
-  // ArticleTableFacto.findAll( function (artcs) {
-  //   vm.articles = artcs;
-  // });
+  vm.post = function () {
+    var data = vm.articles;
+    $http
+      .put('https://newsagg.firebaseio.com/articles/.json', data)
+      .success(function () {
+        console.log('works');
+      }). error(function() {console.log('nope')});
+  };
 
   $http
     .get('https://newsagg.firebaseio.com/articles/.json')
