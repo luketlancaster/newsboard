@@ -1,3 +1,4 @@
+<button><a href="/#/submit">New Post</a></button>
 <table>
   <thead>
     <tr>
@@ -10,11 +11,11 @@
   </thead>
   <tbody>
     <tr ng-repeat="a in table.articles">
-      <td>{{a.votes.up - a.votes.down}}</td>
+      <td class="table--updown"><i class="fa fa-thumbs-up"></i> <span>{{a.votes.up - a.votes.down}}</span> <i class="fa fa-thumbs-down"></i></td>
       <td><a ng-href="{{a.linkUrl}}" target="_blank"><img class="table--thumb" ng-src="{{a.imageUrl}}"></a></td>
       <td><a ng-href="{{a.linkUrl}}" target="_blank">{{a.title}}</a></td>
       <td>{{a.submittedBy}}</td>
-      <td>{{a.postDate}}</td>
+      <td>{{a.postDate | datePretty}}</td>
     </tr>
   </tbody>
 </table>

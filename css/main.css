@@ -2,3 +2,23 @@
   max-width: 70px;
   max-height: 70px;
 }
+
+.table--updown span, .table--updown i {
+  display: block;
+  text-align: center;
+}
+
+.table--updown i:first-child:hover {
+  color: cadetblue;
+  transition: 0.5s linear;
+}
+
+.table--updown i:last-child:hover {
+  color: indianred;
+  transition: 0.5s linear;
+}
+
+.table--updown i {
+  color: darkgrey;
+  transition: 0.5s linear;
+}
