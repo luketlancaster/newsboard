@@ -22,3 +22,13 @@
   color: darkgrey;
   transition: 0.5s linear;
 }
+
+.up i:first-child {
+  color: orange;
+  opacity: 0.5;
+}
+
+.down i:last-child {
+  color: purple;
+  opacity: 0.5;
+}
