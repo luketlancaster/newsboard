@@ -11,5 +11,10 @@ angular
       templateUrl: 'js/articles/new.html',
       controller: 'NewArticleCtrl',
       controllerAs: 'article'
+    })
+    .when('/login', {
+      templateUrl: 'js/auth/auth.html',
+      controller: 'AuthController',
+      controllerAs: 'auth'
     });
 });

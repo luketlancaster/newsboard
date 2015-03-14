@@ -1,0 +1,15 @@
+<form name="loginForm" novalidate ng-submit="auth.login()">
+  <div class="row">
+    <div class="u-full-width">
+      <label>E-mail</label>
+      <input class="u-full-width" type="email" placeholder="luke@somewhere.com" ng-model="auth.user.email">
+    </div>
+    <div class="u-full-width">
+      <label>Password</label>
+      <input class="u-full-width" type="password" placeholder="Password" ng-model="auth.user.password">
+    </div>
+  </div>
+  <input class="button-primary" type="submit" value="Login">
+  <button class="button-primary">Register</button>
+  <button class="button-primary">Forgot Password</button>
+</form>
