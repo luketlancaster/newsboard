@@ -2,7 +2,7 @@ angular
   .module('news')
   .controller('AuthController', AuthController);
 
-function AuthController (BASE_URL, $location, $scope) {
+function AuthController (BASE_URL, $location, $scope, $rootScope) {
   var vm = this;
   vm.user = {};
 
@@ -14,6 +14,7 @@ function AuthController (BASE_URL, $location, $scope) {
         console.log('nope', error);
       } else {
         console.log('yup', authData);
+        $rootScope.user = authData;
         $location.path('/');
         $scope.$apply();
       }
