@@ -15,6 +15,16 @@ angular
     .when('/login', {
       templateUrl: 'js/auth/auth.html',
       controller: 'AuthController',
-      controllerAs: 'auth'
+      controllerAs: 'auth',
+      resolve: {
+        data: function($location, authFactory) {
+          if(authFactory.isLoggedIn()) {
+            $location.path('/');
+          }
+        }
+      }
+    })
+    .otherwise({
+      redirectTo: '/login'
     });
 });
