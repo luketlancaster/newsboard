@@ -14,6 +14,12 @@ function authFactory(BASE_URL) {
       var fb = new Firebase(BASE_URL);
 
       fb.unauth(cb);
+    },
+
+    getAuth: function () {
+      var fb = new Firebase(BASE_URL);
+
+      return fb.getAuth();
     }
   };
 }

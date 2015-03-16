@@ -5,12 +5,14 @@ angular
     .when('/', {
       templateUrl: 'js/articles/table.html',
       controller: 'ArticleTableCtrl',
-      controllerAs: 'table'
+      controllerAs: 'table',
+      private: true
     })
     .when('/submit', {
       templateUrl: 'js/articles/new.html',
       controller: 'NewArticleCtrl',
-      controllerAs: 'article'
+      controllerAs: 'article',
+      private: true
     })
     .when('/login', {
       templateUrl: 'js/auth/auth.html',

@@ -2,7 +2,7 @@ angular
   .module('news')
   .controller('ArticleTableCtrl', ArticleTableCtrl);
 
-function ArticleTableCtrl($http, BASE_URL, $rootScope) {
+function ArticleTableCtrl($http, BASE_URL) {
   var vm   = this,
       fb   = new Firebase(BASE_URL),
       user = fb.getAuth();
